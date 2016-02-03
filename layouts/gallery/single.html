@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "top-subpage.html" . }}
+<!-- One -->
+<section id="one" class="wrapper major-pad">
+  <div class="inner narrow-page">
+    {{ range .Params.images }}
+    <span class="image fit">
+			<img src="{{ .img }}" alt="{{ .caption }}">
+		</span>
+		<p>{{ .caption }}</p>
+		<hr>
+		{{end}}
+		<hr>
+    {{ .Content }}
+  </div>
+</section>
+
+{{ partial "foot.html" . }}

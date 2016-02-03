@@ -1,0 +1,44 @@
+{{ partial "head.html" . }}
+{{ partial "top-subpage.html" . }}
+<!-- One -->
+<section id="one" class="wrapper major-pad">
+  <div class="inner">
+    <section class="spotlight">
+      <div class="content">
+        <h2>Angels Among Us</h2>
+        <p>This November, strap on your wings and join the movement as Bashaw United Church challenges the community to perform more than 100 random Acts of Angels in just 40 days!  Follow these 3 easy steps:</p>
+      </div>
+      <span class="image"><img src="{{ .Site.BaseUrl }}/images/Angels-Among-Us.jpg" alt="" /></span>
+    </section>
+  </div>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper content-pad">
+  <div class="inner">
+    <div class="features">
+      <section class="content">
+        <span class="icon-wrapper major"><span class="icon fa-camera"></span></span>
+        <h3>Step 1</h3>
+        <p>Take a picture of any Act of Angels you’ve performed or witnessed.</p>
+      </section>
+      <section class="content">
+        <span class="icon-wrapper major"><span class="icon fa-facebook-square"></span></span>
+        <h3>Step 2</h3>
+        <p>Post it to Facebook or Instagram with the hashtag #BashawAngels.  Or, pick up an Angel Card around town and fill it out.</p>
+      </section>
+      <section class="content">
+        <span class="icon-wrapper major"><span class="icon fa-heart"></span></span>
+        <h3>Step 3</h3>
+        <p>Stop at the Bashaw United Church to see the Acts of Angels outdoor exhibit we’ll be creating out of everyone’s Angel Cards!</p>
+      </section>
+    </div>
+  </div>
+</section>
+<section id="one" class="wrapper major-pad">
+  <div class="inner narrow-page">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ partial "foot.html" . }}

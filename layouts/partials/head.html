@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ .Title }} &middot; {{ .Site.Author.name }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
+    <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
+    <!--[if lte IE 8]><script src="{{ .Site.BaseUrl }}/js/ie/html5shiv.js"></script><![endif]-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/styles.css">
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/ie9.css" /><![endif]-->
+    <!-- <noscript><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/noscript.css" /></noscript> -->
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link href="/favicon.png" rel="icon">
+
+    <!-- JS -->
+    <script src="{{ .Site.BaseUrl }}/js/jquery.min.js"></script>
+  </head>
+  <body{{ with .Site.Params.theme }} class="{{ . }}"{{ end }}>

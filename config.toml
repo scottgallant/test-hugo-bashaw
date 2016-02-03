@@ -1,0 +1,16 @@
+baseurl = "http://suppatime.com"
+languageCode = "en-us"
+title = "Bashaw United Church"
+contact = "/:filename/"
+[[menu.main]]
+	name = "Sermons"
+	url = "/sermon"
+	weight = 1
+[[menu.main]]
+	name = "Events"
+	url = "/event"
+	weight = 2
+[[menu.main]]
+	name = "Blog"
+	url = "/blog"
+	weight = 2

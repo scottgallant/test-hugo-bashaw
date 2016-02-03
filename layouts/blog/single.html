@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+{{ partial "top-subpage.html" . }}
+  <section id="main" class="wrapper sidebar right">
+    <div class="inner">
+
+    <!-- Content -->
+      <div class="content">
+        <h1>{{ .Title }}</h1>
+        {{ if isset .Params "video"}}
+          <div class="video-wrap">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/{{ trim .Params.video "https://www.youtube.com/watch?v="}}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        {{ else if isset .Params "thumbnail"}}
+          <span class="image fit"><img src="{{ .Site.BaseUrl }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}"></span>
+        {{ end }}
+        {{ if isset .Params "eventdate" }}
+          <p><strong>Date</strong> {{ .Params.eventdate }}
+        {{ end }}
+        <br><br>
+        {{ .Content }}
+      </div>
+
+      {{ partial "sidebar.html" . }}
+    </div><!-- .inner -->
+  </section><!-- .wrapper -->
+
+
+{{ partial "foot.html" . }}

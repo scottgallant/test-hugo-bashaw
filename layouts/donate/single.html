@@ -1,0 +1,84 @@
+{{ partial "head.html" . }}
+{{ partial "top-subpage.html" . }}
+
+<section id="banner" style="min-height: 25em; height: 50vh">
+  <article>
+    <img src="{{ .Site.BaseUrl }}/images/church01.jpg" alt="">
+    <div class="inner">
+      <h2>Our Vision</h2>
+    <p>Living God’s Love, Sharing God’s Love</p>
+    </div>
+  </article>
+</section>
+<section id="one" class="wrapper split">
+  <div class="inner">
+    <section class="">
+      <div class="content">
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      </div>
+    </section>
+    <section>
+      <script src="https://checkout.stripe.com/checkout.js"></script>
+        <form id="stripe-form" method="post">
+        <div class="payment-errors"></div>
+        <label for="amount">Amount</label>
+        <input type="text" class="amount" value="" placeholder="$0.00" name="amount">
+        <input type="submit" id="donateButton" class="donate-button" value="Donate">
+        </form>
+        <script>
+          var donationAmount = 0;
+          var handler = StripeCheckout.configure({
+            key: 'pk_live_CfmxSrl6aXlDtmyMnFymAI3X',
+            image: '',
+            locale: 'auto',
+            token: function(token) {
+              $('.spinner').show();
+              $.ajax({
+                url: "https://414h0iubt1.execute-api.us-west-2.amazonaws.com/prod/donationCapture",
+                data: JSON.stringify({
+                  token: token.id,
+                  amount: donationAmount * 100
+                }),
+                dataType: "json",
+                type: "post",
+                headers: {
+                  "x-api-key": "BMZCI3IVE8oZvo7IpvTL6h8LGir6G78duanZz520"
+                }
+              }).done(function (response) {
+                window.location = "/charge";
+              }).error(function () {
+                console.log("there was an error");
+              });
+            }
+          });
+
+          $('#stripe-form').on('submit', function(e) {
+            var regex  = /^\$?(([1-9][0-9]{0,2}(,[0-9]{3})*)|[0-9]+)?(\.[0-9]{1,2})?$/;
+            donationAmount = $('input.amount').val();
+            donationAmount = parseInt(donationAmount.replace(/,/g, ''), 10)
+
+            if (regex.test(donationAmount)) {
+                // Open Checkout with further options
+                handler.open({
+                  name: 'Bashaw United Church',
+                  description: 'Donation',
+                  currency: 'cad',
+                  amount: donationAmount * 100
+                });
+            } else {
+                alert("Please put in a donation amount in dollars");
+            }
+            e.preventDefault();
+          });
+
+          // Close Checkout on page navigation
+          $(window).on('popstate', function() {
+            handler.close();
+          });
+        </script>
+    </section>
+  </div>
+</section>
+
+{{ partial "foot.html" . }}

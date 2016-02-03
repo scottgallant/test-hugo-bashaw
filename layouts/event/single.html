@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+{{ partial "top-subpage.html" . }}
+  <section id="main" class="wrapper sidebar right">
+    <div class="inner">
+
+    <!-- Content -->
+      <div class="content">
+        {{ if isset .Params "thumbnail" }}
+          <span class="image fit"><img src="{{ .Site.BaseUrl }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}"></span>
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+        {{ if isset .Params "eventdate" }}
+          <p><strong>Event Date</strong> {{ .Params.eventdate }}
+        {{ end }}
+        {{ .Content }}
+      </div>
+
+      {{ partial "sidebar.html" . }}
+    </div><!-- .inner -->
+  </section><!-- .wrapper -->
+
+
+{{ partial "foot.html" . }}

@@ -1,0 +1,93 @@
+{{ partial "head.html" . }}
+{{ partial "top.html" . }}
+
+  <!-- {{ range .Data.Pages }}
+    {{ if eq .Type "sermon" }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ end }}
+  {{ end }} -->
+<!-- Banner -->
+      <section id="banner">
+        <article>
+          <img src="{{ .Site.BaseUrl }}/images/home-banner-2.jpg" alt="" />
+          <div class="inner">
+            <h2><a href="#">Bashaw United Church</a></h2>
+            <p>Living God’s Love. Sharing God’s Love.</p>
+          </div>
+        </article>
+      </section>
+
+
+      <!-- Sermons -->
+      <section id="three" class="wrapper style2">
+        <div class="inner">
+          <h2><a href="/sermon">Sermons</a></h2>
+          <div class="posts">
+
+            {{ range first 3 (where .Site.Pages "Section" "sermon") }}
+                      <section class="post">
+                        <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseUrl }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
+                        <div class="content">
+                          <h3>{{ .Title }}</h3>
+                          <p>{{ .Description }}</p>
+                          <ul class="actions">
+                            <li><a href="{{ .Permalink }}" class="button">More</a></li>
+                          </ul>
+                        </div>
+                      </section>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section id="three" class="wrapper style2">
+        <div class="inner">
+          <h2><a href="/event">Events</a></h2>
+          <div class="posts">
+
+            {{ range first 3 (where .Site.Pages "Section" "event") }}
+                <section class="post">
+                  <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseUrl }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
+                  <div class="content">
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Description }}</p>
+                    <ul class="actions">
+                      <li><a href="{{ .Permalink }}" class="button">More</a></li>
+                    </ul>
+                  </div>
+                </section>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+
+<!--
+--------------------------------------
+-->
+
+<div class="content container">
+  <div class="posts">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+    <div class="post">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <div class="post-meta">
+        {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read &middot; {{ .FuzzyWordCount }} words
+        {{ if isset .Params "categories" }}
+          {{ $baseUrl := .Site.BaseUrl }}
+          {{ range .Params.categories }}
+            <a class="label" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+      <p class="summary">{{ .Summary }}</p>
+      <a class="read-more" href="{{ .Permalink }}">Read On &rarr;</a>
+    </div>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ partial "foot.html" . }}
