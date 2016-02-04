@@ -1,4 +1,4 @@
-BaseURL = "https://uparky.com"
+baseurl = "https://uparky.com"
 contact = "/:filename/"
 languagecode = "en-us"
 title = "Bashaw Test Site"
