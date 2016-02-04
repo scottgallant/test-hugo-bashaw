@@ -4,7 +4,7 @@ languagecode = "en-us"
 pluralizelisttitles = false
 title = "Bashaw United Church"
 [[menu.main]]
-name = "Sermonsx"
+name = "Sermonsx wowo"
 url = "/sermon"
 weight = 1
 [[menu.main]]
