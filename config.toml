@@ -1,7 +1,7 @@
-baseurl = "https://uparky.com"
+BaseURL = "https://uparky.com"
 contact = "/:filename/"
 languagecode = "en-us"
-title = "Bashaw United Church"
+title = "Bashaw Test Site"
 [[menu.main]]
 name = "Sermons"
 url = "/sermon"

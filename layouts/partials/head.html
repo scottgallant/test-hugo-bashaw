@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
     <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
-    <!--[if lte IE 8]><script src="{{ .Site.BaseUrl }}/js/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="{{ .Site.BaseURL }}/js/ie/html5shiv.js"></script><![endif]-->
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css">
-    <!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/ie9.css" /><![endif]-->
-    <!-- <noscript><link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/noscript.css" /></noscript> -->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie9.css" /><![endif]-->
+    <!-- <noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/noscript.css" /></noscript> -->
 
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
