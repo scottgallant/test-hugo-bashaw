@@ -1,8 +1,9 @@
 +++
-tags = []
 date = "2015-10-28T16:21:23-03:00"
-title = "I once was blind but now I see"
+tags = []
 thumbnail = "Blog-Bartimaeus.jpg"
+title = "I once was blind but now I see"
+
 +++
 # Natas voce nec venas quique
 
@@ -39,7 +40,7 @@ matri quaerere ad clarique virgine. Coepta prius! Non quid latis?
     } else {
         click_boot(twain_bus, edutainmentProxyRemote);
     }
-    if (5 >= modifierClipboard) {
+    if (5 &gt;= modifierClipboard) {
         dvUpLossless.hypermediaIrcShareware += botBackup -
                 halftone_vaporware_title;
         status.blu_directx.fat_remote_development(nuiFormula.infotainment(-4));
