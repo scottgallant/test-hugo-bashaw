@@ -1,6 +1,7 @@
-BaseURL = "http://scottgallant.github.io/deploy-test"
+baseurl = "http://scottgallant.github.io/deploy-test"
 contact = "/:filename/"
 languagecode = "en-us"
+pluralizelisttitles = false
 title = "Bashaw Test Site"
 [[menu.main]]
 name = "Sermons"
