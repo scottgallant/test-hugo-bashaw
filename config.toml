@@ -1,4 +1,4 @@
-baseurl = "http://rooftopgardenz.com"
+BaseURL = "http://scottgallant.github.io/deploy-test/"
 languageCode = "en-us"
 title = "Bashaw United Church"
 contact = "/:filename/"

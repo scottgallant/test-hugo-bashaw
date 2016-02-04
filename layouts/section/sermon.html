@@ -14,7 +14,7 @@
           <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <a href="{{ .Permalink }}" class="image fit">
           {{ if isset .Params "thumbnail" }}
-            <img src="{{ .Site.BaseUrl }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}">
+            <img src="{{ .Site.BaseURL }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}">
           {{ end }}
           </a>
           <p>{{ if ne .Description "" }}{{ .Description }}{{ end }}</p>
