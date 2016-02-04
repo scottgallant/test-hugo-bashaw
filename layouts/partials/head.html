@@ -9,16 +9,15 @@
     <!--[if lte IE 8]><script src="{{ .Site.BaseURL }}/js/ie/html5shiv.js"></script><![endif]-->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/styles.css">
     <!--[if lte IE 8]><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/ie9.css" /><![endif]-->
     <!-- <noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}/css/noscript.css" /></noscript> -->
 
     <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-    <link href="/favicon.png" rel="icon">
+    <link href="{{ .Site.BaseURL }}/favicon.png" rel="icon">
 
     <!-- JS -->
-    <script src="/js/jquery.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/jquery.min.js"></script>
   </head>
   <body{{ with .Site.Params.theme }} class="{{ . }}"{{ end }}>
