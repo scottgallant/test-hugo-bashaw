@@ -11,7 +11,7 @@
             <iframe width="800" height="450" src="https://www.youtube.com/embed/{{ trim .Params.video "https://www.youtube.com/watch?v="}}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
           </div>
         {{ else if isset .Params "thumbnail"}}
-          <span class="image fit"><img src="{{ .Site.BaseUrl }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}"></span>
+          <span class="image fit"><img src="{{ .Site.BaseURL }}/images/{{ .Params.thumbnail }}" alt="Bashaw United Church Event - {{ .Title }}"></span>
         {{ end }}
         {{ if isset .Params "eventdate" }}
           <p><strong>Date</strong> {{ .Params.eventdate }}

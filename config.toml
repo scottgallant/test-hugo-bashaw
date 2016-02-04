@@ -1,4 +1,4 @@
-baseurl = "http://suppatime.com"
+BaseURL = "http://suppatime.com"
 languageCode = "en-us"
 title = "Bashaw United Church"
 contact = "/:filename/"
