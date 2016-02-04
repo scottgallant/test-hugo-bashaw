@@ -11,7 +11,7 @@
           <p class="copyright">{{.Site.Data.footer.site_footer.copyright}}</p>
           <p class="copyright">{{.Site.Data.footer.site_footer.description}}</p>
           <ul class="menu">
-            <li><a href="{{ .Site.BaseURL}}">Cool</a></li>
+            <li><a href="{{ .Site.BaseUrl}}">Bashaw United Church</a></li>
           </ul>
         </div>
       </footer>
@@ -23,13 +23,13 @@
       </div>
 
     <!-- Scripts -->
-      <script src="{{ .Site.BaseURL }}/js/jquery.dropotron.min.js"></script>
-      <script src="{{ .Site.BaseURL }}/js/jquery.scrollex.min.js"></script>
-      <script src="{{ .Site.BaseURL }}/js/skel.min.js"></script>
-      <script src="{{ .Site.BaseURL }}/js/jquery.fitvids.js"></script>
-      <script src="{{ .Site.BaseURL }}/js/util.js"></script>
-      <!--[if lte IE 8]><script src="{{ .Site.BaseURL }}/js/ie/respond.min.js"></script><![endif]-->
-      <script src="{{ .Site.BaseURL }}/js/main.js"></script>
+      <script src="{{ .Site.BaseUrl }}/js/jquery.dropotron.min.js"></script>
+      <script src="{{ .Site.BaseUrl }}/js/jquery.scrollex.min.js"></script>
+      <script src="{{ .Site.BaseUrl }}/js/skel.min.js"></script>
+      <script src="{{ .Site.BaseUrl }}/js/jquery.fitvids.js"></script>
+      <script src="{{ .Site.BaseUrl }}/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="{{ .Site.BaseUrl }}/js/main.js"></script>
     {{ with .Site.Params.googleAnalytics }}
       <script>
         var _gaq=[['_setAccount','{{ . }}'],['_trackPageview']];

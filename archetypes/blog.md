@@ -1,6 +1,4 @@
 +++
 title = ""
-description = ""
-tags = []
 thumbnail = ""
 +++

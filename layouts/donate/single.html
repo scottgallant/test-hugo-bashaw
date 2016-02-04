@@ -3,7 +3,7 @@
 
 <section id="banner" style="min-height: 25em; height: 50vh">
   <article>
-    <img src="{{ .Site.BaseURL }}/images/church01.jpg" alt="">
+    <img src="{{ .Site.BaseUrl }}/images/church01.jpg" alt="">
     <div class="inner">
       <h2>Our Vision</h2>
     <p>Living God’s Love, Sharing God’s Love</p>
@@ -29,7 +29,7 @@
         <script>
           var donationAmount = 0;
           var handler = StripeCheckout.configure({
-            key: '',
+            key: 'pk_live_CfmxSrl6aXlDtmyMnFymAI3X',
             image: '',
             locale: 'auto',
             token: function(token) {
@@ -61,7 +61,7 @@
             if (regex.test(donationAmount)) {
                 // Open Checkout with further options
                 handler.open({
-                  name: 'Cool',
+                  name: 'Bashaw United Church',
                   description: 'Donation',
                   currency: 'cad',
                   amount: donationAmount * 100

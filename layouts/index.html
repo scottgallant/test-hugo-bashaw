@@ -9,9 +9,9 @@
 <!-- Banner -->
       <section id="banner">
         <article>
-          <img src="{{ .Site.BaseURL }}/images/home-banner-2.jpg" alt="" />
+          <img src="{{ .Site.BaseUrl }}/images/home-banner-2.jpg" alt="" />
           <div class="inner">
-            <h2><a href="#">Test site</a></h2>
+            <h2><a href="#">Bashaw United Church</a></h2>
             <p>Living God’s Love. Sharing God’s Love.</p>
           </div>
         </article>
@@ -26,7 +26,7 @@
 
             {{ range first 3 (where .Site.Pages "Section" "sermon") }}
                       <section class="post">
-                        <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseURL }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
+                        <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseUrl }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
                         <div class="content">
                           <h3>{{ .Title }}</h3>
                           <p>{{ .Description }}</p>
@@ -48,7 +48,7 @@
 
             {{ range first 3 (where .Site.Pages "Section" "event") }}
                 <section class="post">
-                  <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseURL }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
+                  <a href="{{ .Permalink }}"><span class="image"><img src="{{ .Site.BaseUrl }}/images/{{ if isset .Params "thumbnail"}}{{.Params.thumbnail}}{{else}}pic01.jpg{{end}}" alt="" /></span></a>
                   <div class="content">
                     <h3>{{ .Title }}</h3>
                     <p>{{ .Description }}</p>
@@ -77,9 +77,9 @@
       <div class="post-meta">
         {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read &middot; {{ .FuzzyWordCount }} words
         {{ if isset .Params "categories" }}
-          {{ $BaseURL := .Site.BaseURL }}
+          {{ $baseUrl := .Site.BaseUrl }}
           {{ range .Params.categories }}
-            <a class="label" href="{{ $BaseURL }}/categories/{{ . | urlize }}">{{ . }}</a>
+            <a class="label" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>
           {{ end }}
         {{ end }}
       </div>

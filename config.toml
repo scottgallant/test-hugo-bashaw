@@ -1,19 +1,16 @@
-BaseURL = "http://scottgallant.github.io/deploy-test"
+baseurl = "http://rooftopgardenz.com"
+languageCode = "en-us"
+title = "Bashaw United Church"
 contact = "/:filename/"
-languagecode = "en-us"
-pluralizelisttitles = false
-title = "Bashaw Test Site"
 [[menu.main]]
-name = "Sermons"
-url = "/sermon"
-weight = 1
+	name = "Sermons"
+	url = "/sermon"
+	weight = 1
 [[menu.main]]
-name = "Events"
-url = "/event"
-weight = 2
+	name = "Events"
+	url = "/event"
+	weight = 2
 [[menu.main]]
-name = "Blog"
-url = "/blog"
-weight = 2
-[taxonomies]
-tag = "tags"
+	name = "Blog"
+	url = "/blog"
+	weight = 2
