@@ -1,4 +1,4 @@
-BaseURL = "http://scottgallant.github.io/deploy-test/"
+baseurl = "http://scottgallant.github.io/deploy-test/"
 contact = "/:filename/"
 languagecode = "en-us"
 title = "Bashaw Test Site"
