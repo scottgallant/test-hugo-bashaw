@@ -1,5 +1,6 @@
 +++
 date = "2015-11-09T00:41:57-04:00"
+draft = false
 thumbnail = "Blog-sacrifice.png"
 title = "Sacrifice Into Living"
 

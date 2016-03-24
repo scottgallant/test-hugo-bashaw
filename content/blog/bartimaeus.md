@@ -1,5 +1,6 @@
 +++
 date = "2015-10-28T16:21:23-03:00"
+draft = false
 tags = []
 thumbnail = "Blog-Bartimaeus.jpg"
 title = "I once was blind but now I see"

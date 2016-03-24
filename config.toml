@@ -15,3 +15,7 @@ weight = 2
 name = "Blog"
 url = "/blog"
 weight = 2
+[sitemap]
+ChangeFreq = ""
+Filename = "sitemap.xml"
+Priority = "-1"

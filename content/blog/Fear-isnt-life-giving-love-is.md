@@ -1,10 +1,10 @@
 +++
 date = "2015-10-29T23:01:30-03:00"
+draft = false
 thumbnail = "Blog-fear-is-a-liar.jpg"
 title = "Fear isn’t life-giving, love is"
 
 +++
-
 # Natas voce nec venas quique
 
 ## Num decidit Hippasus praeferret munera temerarius vulnere

@@ -1,5 +1,6 @@
 +++
 date = "2015-11-05T01:10:58-04:00"
+draft = false
 thumbnail = "Shrek-be-a-hero.jpg"
 title = "I guess I'd be a hero"
 
